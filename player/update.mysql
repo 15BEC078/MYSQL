@@ -1,0 +1,12 @@
+create database company;
+use company;
+create table employee
+(
+ ID int,
+ NAME char(10),
+ AGE int,
+ ADDRESS char(20),
+ SALARY int);
+ INSERT INTO employee values('1','Ramesh','32','ahmedabad','2000'),('2','khilan','25','delhi','1500'),('3','kaushik','23','kota','2000'),('4','chaitali','25','mumbai','6500'),('5','hardik','27','bhopal','8500'),('6','komal','22','mp','4500'),('7','muffy','24','indore','10000');
+ UPDATE employee SET ADDRESS='MAHARASTRA' WHERE ID=6;
+ SELECT * FROM employee;
