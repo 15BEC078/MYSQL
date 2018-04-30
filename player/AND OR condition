@@ -1,0 +1,12 @@
+create database my_guvi_db;
+USE my_guvi_db;
+
+CREATE TABLE student
+(
+    ID int,
+    NAME varchar(12),
+    AGE varchar(20)
+);
+INSERT INTO student VALUES('1','vinodhini','25'),('2','banu','27'),('3','kaushik','23'),('4','praveen','25'),('5','kamal','22'),('6','malini','24'),('7','ramesh','32');
+SELECT * from student where age='32' or age='22';
+
