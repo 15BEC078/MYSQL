@@ -1,0 +1,57 @@
+create database production;
+show databases;
+use production;
+
+CREATE TABLE my_variety
+(
+    first_name  VARCHAR(15) NOT NULL,
+   
+    flavour    varchar(12) null
+);
+SHOW columns from my_variety;
+INSERT INTO my_variety values('bread','chocolate'),('icecream','vanilla');
+select * from my_variety;
+alter table my_variety add price varchar(3);
+show columns from my_variety;
+
+
+
+
+
+
+create database students;
+show databases;
+use students;
+CREATE TABLE my_friends
+(
+    first_name  VARCHAR(15) NOT NULL,
+    sex         VARCHAR(1) NULL,
+    city        VARCHAR(20) NOT NULL,
+    state       VARCHAR(2) NOT NULL,
+    age     int(5)
+);
+SHOW columns from   my_friends;
+INSERT INTO my_friends values('surya','m','cbe','tn','18'),('siva','m','che','tn','44');
+select * from my_friends;
+alter  table my_friends  drop column sex;
+show columns from my_friends;
+select * from my_friends;
+
+
+
+
+
+
+create database employee;
+show databases;
+use employee;
+CREATE TABLE myemployeesdetails
+(
+    first_name  VARCHAR(15) NOT NULL,
+    sex         VARCHAR(1) NULL,
+    city        VARCHAR(20) NOT NULL,
+    state       VARCHAR(2) NOT NULL,
+    age     int
+);
+show columns from myemployeesdetails;
+INSERT INTO myemployeesdetails values('surya','m','cbe','tn','18'),('siva','m','che','tn','44');
