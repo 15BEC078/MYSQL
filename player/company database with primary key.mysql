@@ -1,0 +1,15 @@
+create database company;
+show databases;
+use company;
+CREATE TABLE employee
+(
+    first_name  VARCHAR(15) NOT NULL,
+    sex         VARCHAR(1) NULL,
+    city        VARCHAR(20) NOT NULL,
+    state       VARCHAR(2) NOT NULL,
+    age     int,
+    PRIMARY KEY(first_name)
+);
+show columns from employee;
+INSERT INTO employee values('surya','m','cbe','tn','18'),('siva','m','che','tn','44');
+select * from employee;
