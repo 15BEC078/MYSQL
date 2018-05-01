@@ -1,0 +1,36 @@
+create database student;
+use student;
+create table info
+(
+id int(10) NOT NULL AUTO_INCREMENT,
+name varchar(12),
+department_id varchar(10),
+department varchar(10),
+age int,
+quota varchar(12),
+gender varchar(10),
+state varchar(10),
+PRIMARY KEY (id)
+);
+insert into info(name,department_id,department,age,quota,gender,state) values('bhava','125','ece','19','_','female','tn'),('harini','125','ece','20','_','female','tn'),('thamarai','127','eee','22','_','female','mp'),
+('thamizh','120','mech','25','_','male','ap'),('ammu','123','civil','23','_','female','up'),('karan','125','ece','22','_','male','tn'),('ram','120','mech','22','_','male','up'),('mani','120','mech','22','_','male','mp'),('mohan','124','bio','23','_','male','m'),('prabha','124','bio','25','_','female','m');
+
+ALTER table info add city varchar(10);
+update info SET city='trichy' where name='bhava';
+update info SET city='che' where name='harini';
+update info SET city='cbe' where name='thamarai';
+update info SET city='che' where name='thamizh';
+update info SET city='tanjore' where name='ammu';
+update info SET city='mumbai' where name='karan';
+update info SET city='kumbakonam' where name='ram';
+update info SET city='salem' where name='mani';
+update info SET city='namakal' where name='mohan';
+update info SET city='trichy' where name='prabha';
+select * from info order by name ASC , city DESC;
+create table dep 
+(
+ department_id varchar(10),
+ hod varchar(10));
+ insert into dep (department_id,hod) values('125','a'),('127','b'),('120','c'),('123','d'),('124','e');
+  select info.department_id,dep.hod from info,dep where info.department_id=dep.department_id;
+ SELECT CONCAT(city, '  ',state) as address from info;
