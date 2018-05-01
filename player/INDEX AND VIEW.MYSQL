@@ -1,0 +1,16 @@
+create database company;
+use company;
+create table guvi
+(
+ID int NOT NULL AUTO_INCREMENT,
+NAME VARCHAR(15),
+AGE int,
+PRIMARY KEY (ID)
+);
+INSERT INTO guvi(NAME,AGE)  values('bhavadharini','19');
+INSERT INTO guvi(NAME,AGE) values('harini','18');
+CREATE INDEX idx_AGE ON guvi(AGE);
+SELECT * FROM guvi;
+CREATE VIEW LIMITED_EDITION AS SELECT * from guvi where AGE = '18';
+
+SELECT * FROM LIMITED_EDITION;
