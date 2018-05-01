@@ -1,0 +1,12 @@
+create database company;
+use company;
+create table employee
+(
+ID int NOT NULL AUTO_INCREMENT,
+NAME VARCHAR(15),
+AGE int,
+PRIMARY KEY (ID)
+);
+INSERT INTO employee(NAME,AGE)  values('bhavadharini','19');
+INSERT INTO employee(NAME,AGE) values('harini','18');
+select * from employee;
